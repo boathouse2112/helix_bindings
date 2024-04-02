@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template
+package com.github.boathouse2112.helixbindings
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls
