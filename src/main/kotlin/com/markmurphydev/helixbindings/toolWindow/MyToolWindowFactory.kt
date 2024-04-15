@@ -1,4 +1,4 @@
-package com.github.boathouse2112.helixbindings.toolWindow
+package com.markmurphydev.helixbindings.toolWindow
 
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
@@ -8,8 +8,8 @@ import com.intellij.openapi.wm.ToolWindowFactory
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
-import com.github.boathouse2112.helixbindings.MyBundle
-import com.github.boathouse2112.helixbindings.services.MyProjectService
+import com.markmurphydev.helixbindings.MyBundle
+import com.markmurphydev.helixbindings.services.MyProjectService
 import javax.swing.JButton
 
 

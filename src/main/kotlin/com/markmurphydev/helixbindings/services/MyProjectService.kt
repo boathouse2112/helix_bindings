@@ -1,9 +1,9 @@
-package com.github.boathouse2112.helixbindings.services
+package com.markmurphydev.helixbindings.services
 
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
-import com.github.boathouse2112.helixbindings.MyBundle
+import com.markmurphydev.helixbindings.MyBundle
 
 @Service(Service.Level.PROJECT)
 class MyProjectService(project: Project) {

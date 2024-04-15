@@ -8,11 +8,22 @@
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
+    <actions>
+        <action
+                id="EditorIllustrationAction"
+                class="com.markmurphydev.helixbindings.editor.EditorIllustrationAction"
+                text="Editor Replace Text"
+                description="Replaces selected text with 'Replacement'."
+        >
+            <add-to-group group-id="EditorPopupMenu" anchor="first" />
+        </action>
+    </actions>
+
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.boathouse2112.helixbindings.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow factoryClass="com.markmurphydev.helixbindings.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.boathouse2112.helixbindings.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+        <listener class="com.markmurphydev.helixbindings.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
 </idea-plugin>

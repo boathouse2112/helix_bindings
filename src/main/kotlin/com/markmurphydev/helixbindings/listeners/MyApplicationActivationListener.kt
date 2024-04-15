@@ -1,4 +1,4 @@
-package com.github.boathouse2112.helixbindings.listeners
+package com.markmurphydev.helixbindings.listeners
 
 import com.intellij.openapi.application.ApplicationActivationListener
 import com.intellij.openapi.diagnostic.thisLogger
