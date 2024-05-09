@@ -1,0 +1,17 @@
+package com.markmurphydev.helixbindings.commands
+
+import com.intellij.openapi.actionSystem.AnAction
+import com.intellij.openapi.actionSystem.AnActionEvent
+import com.intellij.openapi.actionSystem.CommonDataKeys
+import com.intellij.openapi.actionSystem.DataContext
+import com.intellij.openapi.editor.Caret
+import com.intellij.openapi.editor.Editor
+
+class Offset(val offset: Int)
+
+class MotionAction(val getOffset: (Editor, Caret, DataContext) -> Offset): AnAction() {
+    override fun actionPerformed(e: AnActionEvent) {
+        val editor = e.dataContext.getData(CommonDataKeys.EDITOR)!!
+        editor.caretModel.primaryCaret.
+    }
+}
