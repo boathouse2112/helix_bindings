@@ -5,12 +5,16 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.StartupActivity
 
 /**
- * Registered to run on project startup. Lets us initialize stuff.
+ * Registered to run on project startup.
+ * Used to:
+ * - Replace the TypedActionHandler to intercept keystrokes.
+ *
+ * Idea won't let me make this sealed. Not sure why.
  */
 class PostStartup: StartupActivity {
 
     /**
-     * Is run by Idea on project startup
+     * Registered to run on project startup
      */
     override fun runActivity(project: Project) {
         this.replaceTypedActionHandler()

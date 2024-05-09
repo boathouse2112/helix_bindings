@@ -5,8 +5,7 @@ import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.editor.actionSystem.ActionPlan
 import com.intellij.openapi.editor.actionSystem.TypedActionHandler
 import com.intellij.openapi.editor.actionSystem.TypedActionHandlerEx
-import java.awt.event.KeyEvent
-import javax.swing.KeyStroke
+import com.markmurphydev.helixbindings.commands.Commands
 
 /**
  * Intercepts keystrokes
@@ -19,6 +18,10 @@ class HelixTypedActionHandler(originalHandler: TypedActionHandler) : TypedAction
     }
 
     override fun execute(editor: Editor, charTyped: Char, dataContext: DataContext) {
+        var caret = editor.caretModel.primaryCaret
+        when (charTyped) {
+            'j' -> Commands.moveLineDown(editor, dataContext)
+        }
 //        TODO("Not yet implemented")
     }
 
