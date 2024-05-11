@@ -17,6 +17,8 @@
         >
             <add-to-group group-id="EditorPopupMenu" anchor="first" />
         </action>
+        <action id="com.markmurphydev.helixbindings.commands.MoveNextWordStartAction"
+                class="com.markmurphydev.helixbindings.commands.MoveNextWordStartAction" text="MoveNextWordStart"/>
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">

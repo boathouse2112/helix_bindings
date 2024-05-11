@@ -32,6 +32,7 @@ class PostStartup: StartupActivity {
             val helixTypedActionHandler = HelixTypedActionHandler(originalHandler)
             typedAction.setupRawHandler(helixTypedActionHandler)
         } else {
+            // TODO -- On project close we should probably un-replace the [TypedActionHandler]
             error("Expected TypedActionHandler to be non-helix.")
         }
     }

@@ -21,8 +21,8 @@ class HelixTypedActionHandler(private val originalHandler: TypedActionHandler) :
     }
 
     /**
-     * Get and execute an [AnAction] for this keystroke's associated helix-action.
-     *
+     * Get and [AnAction.execute] an [AnAction] for this keystroke's associated helix-action.
+     * If the keystroke has no associated helix-action, passes it on to the original [TypedActionHandler]
      */
     override fun execute(editor: Editor, charTyped: Char, dataContext: DataContext) {
         var caret = editor.caretModel.primaryCaret
@@ -32,6 +32,9 @@ class HelixTypedActionHandler(private val originalHandler: TypedActionHandler) :
             'j' -> Commands.moveDown
             'k' -> Commands.moveUp
             'l' -> Commands.moveRight
+
+            'w' -> Commands.moveNextWordStart
+            'b' -> Commands.movePreviousWordStart
             else -> null
         }
         if (command != null) {

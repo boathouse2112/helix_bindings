@@ -7,11 +7,10 @@ import com.intellij.openapi.actionSystem.DataContext
 import com.intellij.openapi.editor.Caret
 import com.intellij.openapi.editor.Editor
 
-class Offset(val offset: Int)
-
-class MotionAction(val getOffset: (Editor, Caret, DataContext) -> Offset): AnAction() {
+class MotionAction(val getOffset: (Editor, Caret, DataContext) -> CaretOffset): AnAction() {
+    // Q: When a
     override fun actionPerformed(e: AnActionEvent) {
-        val editor = e.dataContext.getData(CommonDataKeys.EDITOR)!!
-        editor.caretModel.primaryCaret.
+        val editor = e.getRequiredData(CommonDataKeys.EDITOR)
+        editor
     }
 }

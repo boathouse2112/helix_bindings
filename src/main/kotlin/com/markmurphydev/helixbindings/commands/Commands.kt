@@ -20,8 +20,9 @@ object Commands {
     val moveDown = getNativeAction(IdeActions.ACTION_EDITOR_MOVE_CARET_DOWN)
     val moveUp = getNativeAction(IdeActions.ACTION_EDITOR_MOVE_CARET_UP)
     val moveRight = getNativeAction(IdeActions.ACTION_EDITOR_MOVE_CARET_RIGHT)
-    fun moveNextWordStart(editor: Editor, context: DataContext) {
-    }
+
+    val moveNextWordStart = MoveNextWordStartAction
+    val movePreviousWordStart = MovePreviousWordStartAction
 }
 
 /**
